@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Meditations</title>
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="icon.png">
+
+<style>
+
+body{
+font-family:-apple-system;
+margin:40px;
+text-align:center;
+background:#f7f7f7;
+color:#111;
+}
+
+button{
+width:100%;
+padding:20px;
+margin:12px 0;
+font-size:18px;
+border:none;
+border-radius:12px;
+background:white;
+color:#111;
+box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+audio{
+width:100%;
+margin-top:30px;
+}
+
+@media (prefers-color-scheme: dark){
+
+body{
+background:#0f0f10;
+color:white;
+}
+
+button{
+background:#1c1c1e;
+color:white;
+box-shadow:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Meditations</h1>
+
+<button onclick="play('5 min box breathing.m4a')">5 Minute Box Breathing</button>
+<button onclick="play('Guided Meditation Blissful Deep Relaxation.m4a')">Deep Relaxation</button>
+<button onclick="play('Guided 10 Minutes.m4a')">10 Minute Reset</button>
+<button onclick="play('Activate Your Vagus Nerve Guided Meditation for Calm, Stress Relief & Healing.m4a')">Vagus Nerve Calm</button>
+<button onclick="play('ASMR Guided Meditation for Stress and Anxiety Relief.mp3')">Stress & Anxiety Relief</button>
+<button onclick="play('Guided Sleep Meditation Forest Relax.mp3')">Sleep Relaxation</button>
+
+<audio id="player" controls></audio>
+
+<script>
+function play(file){
+const player=document.getElementById('player')
+player.src=file
+player.play()
+}
+</script>
+
+</body>
+</html>
